@@ -1,0 +1,4 @@
+
+Static: https://www.studytonight.com/cpp/static-keyword.php
+
+

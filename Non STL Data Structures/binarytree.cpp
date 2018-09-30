@@ -37,6 +37,7 @@ BST::BST() {
 	root = NULL;
 }
 
+// private insert
 void BST::Insert(string data, Node *aNode) {
 	if(data < aNode->data) {
 		if(aNode->left != NULL) 
@@ -57,6 +58,7 @@ void BST::Insert(string data, Node *aNode) {
 	}
 }
 
+// public insert
 void BST::Insert(string data) {
 	if(root != NULL) {
 		Insert(data, root);
@@ -67,6 +69,7 @@ void BST::Insert(string data) {
 	}
 }
 
+// private search
 Node* BST::Search(string data, Node *aNode){
 	if(aNode != NULL) {
 		if(data == aNode->data) {
@@ -82,11 +85,12 @@ Node* BST::Search(string data, Node *aNode){
 	}
 }
 
+// public search
 Node* BST::Search(string data){
 	return Search(data, root);
 }
 
-/* Root, Left, Right*/
+/* Root, Left, Right */
 void BST::preOrder(){
 	preOrder(root);
 }
@@ -99,7 +103,7 @@ void BST::preOrder(Node *aNode) {
 	}
 }
 
-/* Left, Root, Right*/
+/* Left, Root, Right */
 void BST::inOrder() {
 	inOrder(root);
 }
@@ -112,7 +116,7 @@ void BST::inOrder(Node *aNode) {
 	}
 }
 
-/* Left, Right, Root*/
+/* Left, Right, Root */
 void BST::postOrder() {
 	postOrder(root);
 }
@@ -136,5 +140,16 @@ int main() {
 	btree->preOrder(); cout<<endl;
 	btree->inOrder(); cout<<endl;
 	btree->postOrder(); cout<<endl;
+	
+	// or 
+	/* BST btree;
+	
+	btree.Insert("apple");
+	btree.Insert("mango");
+	btree.Insert("kiwi");
+	
+	btree.preOrder(); cout<<endl;
+	btree.inOrder(); cout<<endl;
+	btree.postOrder(); cout<<endl;*/
 	return 0;
 }
