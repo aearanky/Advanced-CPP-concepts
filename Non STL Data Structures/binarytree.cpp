@@ -127,7 +127,7 @@ void BST::postOrder(Node *aNode) {
 
 
 int main() {
-	BST *btree = new BST();
+	BST *btree = new BST;
 	
 	btree->Insert("apple");
 	btree->Insert("mango");
