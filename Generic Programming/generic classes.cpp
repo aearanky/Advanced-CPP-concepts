@@ -33,7 +33,7 @@ class Stack {
 
 
 // This is called class specilization
-// We used this tecnique to handle datastore[top] in pop()
+// We used this technique to handle datastore[top] in pop()
 // as strings would require a different treatment as compared to 
 // number types like int, float, double etc.. 
 template<>

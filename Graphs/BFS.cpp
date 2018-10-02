@@ -17,7 +17,7 @@ Graph::Graph(int v){
 	V=v;
 	
 	// Memory refresher: Allocates size bytes of storage, suitably aligned to represent any 		 object of that size, and returns a non-null pointer to the first byte of this block. 
-	adj = new list<int>[V]; 
+	adj = new list<int>[V];
 }
 
 void Graph::addEdge(int v, int w) {
