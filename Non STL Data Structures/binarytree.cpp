@@ -116,8 +116,8 @@ void BST::postOrder() {
 
 void BST::postOrder(Node *aNode) {
 	if(aNode != NULL) {
-		inOrder(aNode->left);
-		inOrder(aNode->right);
+		postOrder(aNode->left);
+		postOrder(aNode->right);
 		cout << aNode->data <<" ";
 	}
 }
