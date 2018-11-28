@@ -2,17 +2,16 @@
 
 using namespace std;
 
-class Node {
-	public:
-		string data;
-		Node *left;
-		Node *right;
+struct Node {
+	string data;
+	Node *left;
+	Node *right;
 		
-		Node(string d) {
-			data = d;
-			left = NULL;
-			right = NULL;
-		}
+	Node(string d) {
+		data = d;
+		left = NULL;
+		right = NULL;
+	}
 };
 
 class BST {
@@ -44,16 +43,12 @@ void BST::Insert(string data, Node *aNode) {
 			Insert(data, aNode->left);
 		else {
 			aNode->left = new Node(data);
-			aNode->left->left = NULL;
-			aNode->left->right = NULL;
 		}
 	} else if(data >= aNode->data) {
 		if(aNode->right != NULL) 
 			Insert(data, aNode->right);
 		else {
 			aNode->right = new Node(data);
-			aNode->right->left = NULL;
-			aNode->right->right = NULL;
 		}
 	}
 }
@@ -64,8 +59,6 @@ void BST::Insert(string data) {
 		Insert(data, root);
 	} else {
 		root = new Node(data);
-		root->left = NULL;
-		root->right = NULL;
 	}
 }
 
@@ -131,7 +124,7 @@ void BST::postOrder(Node *aNode) {
 
 
 int main() {
-	BST *btree = new BST;
+	BST *btree = new BST();
 	
 	btree->Insert("apple");
 	btree->Insert("mango");
