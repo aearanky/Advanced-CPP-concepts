@@ -37,3 +37,9 @@ int main()
     cout<<myObj.a << " " << myObj.b << " " <<myObj.c << " " << myObj.d << " " << myObj.e << " " << myObj.f << " ";
     return 0;
 }
+
+/* Expected output:
+A's constructor called                                                                                                            
+B's constructor called                                                                                                            
+derived_C's constructor called                                                                                                    
+1 2 baby 4 5 6  */
