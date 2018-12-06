@@ -27,3 +27,10 @@ int main () {
 
    return 0;
 }
+
+/** Expected output:
+Going to sleep....
+Going to sleep....
+Going to sleep....
+Interrupt signal (2) received.
+**/
