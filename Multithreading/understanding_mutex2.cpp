@@ -27,6 +27,7 @@ public:
     void print_block (char c) {
     
         // critical section (exclusive access to std::cout signaled by locking mtx):
+        // test by adding and removing mutex lock
         mtx.lock();
         for (; i<n; ++i) { 
             std::cout << c; 
